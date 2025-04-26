@@ -14,6 +14,11 @@ class Library:
         self.books.append(book)
         return True
 
+    def create_and_add_book(self, title, author, year, pages, quantity):
+        new_book = Book(title, author, year, pages, quantity)
+        self.books.append(new_book)
+        return new_book
+
     def edit_book(self, index, title=None, author=None, year=None, pages=None, quantity=None):
         if not 0 <= index < len(self.books):
             return False
